@@ -31,8 +31,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
-    HAL_Delay(500);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, SET);
+    HAL_Delay(300);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, RESET);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, SET);
+    HAL_Delay(300);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, RESET);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, SET);
+    HAL_Delay(300);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, RESET);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, SET);
+    HAL_Delay(300);
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, RESET);
+
   }
   /* USER CODE END 3 */
 }
